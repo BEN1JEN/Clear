@@ -18,11 +18,14 @@ func _process(delta):
 	if Input.is_action_pressed("movement_backward"):
 		rotation_basis.x.z = -delta
 	if Input.is_action_pressed("movement_left"):
-		rotation_velocity = rotation_velocity + delta*4
+		rotation_velocity = rotation_velocity + delta / 2
 	if Input.is_action_pressed("movement_right"):
-		rotation_velocity = rotation_velocity - delta*4
-	velocity = velocity + rotation_basis.rotated(Vector3(0, 1, 0), self.rotation.y).x
+		rotation_velocity = rotation_velocity - delta / 2
 
+	rotation_velocity = rotation_velocity * (0.85)
+	rotate_y(rotation_velocity)
+
+	velocity = velocity + rotation_basis.rotated(Vector3(0, 1, 0), self.rotation.y).x
 	velocity = velocity * (0.9)
 
 	self.translation = self.translation + velocity

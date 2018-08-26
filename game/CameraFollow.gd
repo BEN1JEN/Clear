@@ -2,7 +2,7 @@ extends Camera
 
 # class member variables go here, for example:
 const nodeToFollow = "/root/World/MainPlayer"
-const follow_angle = Vector3(0, 4, -3)
+const follow_angle = Vector3(0, 3, -3)
 const player_angle_offset = PI
 
 func _ready():
