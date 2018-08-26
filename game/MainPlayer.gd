@@ -11,9 +11,9 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_pressed("movement_forward"):
-		translate(Vector3(0, 0, -delta))
-	if Input.is_action_pressed("movement_backward"):
 		translate(Vector3(0, 0, delta))
+	if Input.is_action_pressed("movement_backward"):
+		translate(Vector3(0, 0, -delta))
 	if Input.is_action_pressed("movement_left"):
 		rotate_y(delta)
 	if Input.is_action_pressed("movement_right"):
