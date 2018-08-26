@@ -1,8 +1,9 @@
 extends KinematicBody
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+# class member variables:
+var velocity = Vector3(0, 0, 0)
+var gravity = Vector3(0, -9.7, 0)
+var rotation_velocity = 0
 
 func _ready():
 	# Called every time the node is added to the scene.
@@ -10,11 +11,21 @@ func _ready():
 	pass
 
 func _process(delta):
+	var rotation_basis = Basis()
+	rotation_basis.x = Vector3(0, 0, 0)
 	if Input.is_action_pressed("movement_forward"):
-		translate(Vector3(0, 0, delta))
+		rotation_basis.x.z = delta
 	if Input.is_action_pressed("movement_backward"):
-		translate(Vector3(0, 0, -delta))
+		rotation_basis.x.z = -delta
 	if Input.is_action_pressed("movement_left"):
-		rotate_y(delta)
+		rotation_velocity = rotation_velocity + delta*4
 	if Input.is_action_pressed("movement_right"):
-		rotate_y(-delta)
+		rotation_velocity = rotation_velocity - delta*4
+	velocity = velocity + rotation_basis.rotated(Vector3(0, 1, 0), self.rotation.y).x
+
+	velocity = velocity * (0.9)
+
+	self.translation = self.translation + velocity
+
+func _physics_process(delta):
+	pass
