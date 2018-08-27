@@ -1,6 +1,6 @@
 extends KinematicBody
 
-# class member variables:
+# variables:
 var velocity = Vector3(0, 0, 0)
 var gravity = Vector3(0, -9.7, 0)
 var rotation_velocity = 0
