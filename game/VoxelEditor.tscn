@@ -90,7 +90,6 @@ _sections_unfolded = [ "Background" ]
 
 [sub_resource type="CubeMesh" id=3]
 
-custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
 size = Vector3( 2, 2, 2 )
 subdivide_width = 0
 subdivide_height = 0
@@ -111,7 +110,7 @@ v_offset = 0.0
 doppler_tracking = 0
 projection = 0
 current = false
-fov = 70.0
+fov = 60.0
 size = 1.0
 near = 0.05
 far = 100.0
@@ -137,28 +136,30 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Overlay" type="Node2D" parent="." index="1"]
 
-[node name="Button" type="Button" parent="Overlay" index="0"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Overlay" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -54.0
-margin_top = -35.0
-margin_right = 283.0
-margin_bottom = 179.0
+margin_right = 203.0
+margin_bottom = 40.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
+rect_clip_content = true
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-flat = false
-align = 1
+bbcode_enabled = false
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Clear Voxel Editor"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
 
