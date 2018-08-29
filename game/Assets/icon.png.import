@@ -2,15 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sky_escape2.jpg-aa5f4cc71bc3cd5a5e8f3e6851b467da.stex"
+path="res://.import/icon.png-ec880de02d5dab0aa15458af9d6c53ed.stex"
 
 [deps]
 
-source_file="res://sky_escape2.jpg"
-source_md5="049bd1a6b79966d59cb303ed9e8c933a"
-
-dest_files=[ "res://.import/sky_escape2.jpg-aa5f4cc71bc3cd5a5e8f3e6851b467da.stex" ]
-dest_md5="3cfc43e80b99cd2c9fc287873e4579e7"
+source_file="res://Assets/icon.png"
+dest_files=[ "res://.import/icon.png-ec880de02d5dab0aa15458af9d6c53ed.stex" ]
 
 [params]
 

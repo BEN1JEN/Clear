@@ -5,7 +5,7 @@ extends Spatial
 # var b = "textvar"
 
 func _ready():
-	var voxelscene = load("res://Voxel.tscn")
+	var voxelscene = load("res://scenes/Voxel.tscn")
 	for x in range(-10, 10):
 		for y in range(-15, 15):
 			for z in range(-10, 10):

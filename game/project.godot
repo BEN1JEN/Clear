@@ -11,8 +11,9 @@ config_version=3
 [application]
 
 config/name="Clear"
-run/main_scene="res://World.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://scenes/World.tscn"
+boot_splash/image="res://Assets/icon.png"
+config/icon="res://Assets/icon.png"
 
 [input]
 
@@ -40,7 +41,3 @@ mouse_zoom_in=[ Object(InputEventMouseButton,"resource_local_to_scene":false,"re
  ]
 mouse_zoom_out=[ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":5,"pressed":false,"doubleclick":false,"script":null)
  ]
-
-[rendering]
-
-environment/default_environment="res://default_env.tres"

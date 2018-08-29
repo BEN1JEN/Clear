@@ -23,7 +23,7 @@ func check_for_visual_block(x, y, z):
 			return true
 	return false
 func instance_blocks(x, y):
-	var blockscene = load("res://Block.tscn")
+	var blockscene = load("res://scenes/Block.tscn")
 	if not cashed_world.has(x):
 		return false
 	if not cashed_world[x].has(y):
